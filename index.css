@@ -15,9 +15,8 @@ html, body {
 #links-container {
   height: 80%;
   width: 80%;
-  background: #308BB6;
-  opacity: .3;
-  box-shadow: 5px 5px 15px #308BB6;
+  background: rgba(48, 139, 182, 0.3);
+  box-shadow: 5px 5px 15px #308BB6 inset;
   display: flex;
   flex-flow: row;
   justify-content: space-around;
@@ -28,6 +27,7 @@ html, body {
   height: 300px;
   width: 300px;
   border-radius: 15px;
+  background: #308BB6;
   opacity: 1;
   padding: 15px;
 }
@@ -37,7 +37,8 @@ html, body {
 }
 
 .card-title {
-
+ background: black;
+ opacity: 100;
 }
 
 .card-body {
