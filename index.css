@@ -1,0 +1,45 @@
+a {
+  text-decoration: none;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('https://gravitatecreative.com/wp-content/uploads/2016/03/Importance-of-Background-Design-pic.jpg')
+}
+
+
+#links-container {
+  height: 80%;
+  width: 80%;
+  background: #308BB6;
+  opacity: .3;
+  box-shadow: 5px 5px 15px #308BB6;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+  opacity: 1;
+  padding: 15px;
+}
+
+.card:hover {
+  box-shadow: 5px 5px 3px;
+}
+
+.card-title {
+
+}
+
+.card-body {
+
+}
