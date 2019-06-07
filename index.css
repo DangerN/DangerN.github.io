@@ -6,11 +6,20 @@ html, body {
   height: 100%;
   width: 100%;
   display: flex;
+  flex-flow: column;
   justify-content: center;
   align-items: center;
-  background-image: url('https://gravitatecreative.com/wp-content/uploads/2016/03/Importance-of-Background-Design-pic.jpg')
+  background-image: url('https://gravitatecreative.com/wp-content/uploads/2016/03/Importance-of-Background-Design-pic.jpg');
 }
 
+#page-title {
+    background: rgba(48, 139, 182, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 150px #308BB6 ;
+    position: relative;
+    z-index: 10;
+}
 
 #links-container {
   height: 80%;
@@ -24,21 +33,23 @@ html, body {
 }
 
 .card {
+  text-decoration: none;
   height: 300px;
   width: 300px;
-  border-radius: 15px;
+  border-radius: 5px;
   background: #308BB6;
   opacity: 1;
   padding: 15px;
 }
 
 .card:hover {
+  color: #FFFFFF;
   box-shadow: 5px 5px 3px;
 }
 
 .card-title {
  background: black;
- opacity: 100;
+ opacity: 50;
 }
 
 .card-body {
