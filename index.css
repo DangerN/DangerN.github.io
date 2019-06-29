@@ -82,13 +82,13 @@ bees:hover {
 
 @keyframes beez {
   25% {
-    transform: rotateY(-20);
+    transform: rotateZ(-5deg);
   }
   50% {
     top: 78%;
   }
   75% {
-    transform: rotateY(20);
+    transform: rotateZ(5deg);
   }
   100% {
     left: 13rem;
