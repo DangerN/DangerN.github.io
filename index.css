@@ -1,57 +1,101 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: none;
+  margin: none;
+  text-decoration: none;
+  list-style: none;
+}
+
 a {
-  text-decoration: none;
+  color: inherit;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: center;
-  background-image: url('https://gravitatecreative.com/wp-content/uploads/2016/03/Importance-of-Background-Design-pic.jpg');
+body {
+  background: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  display: grid;
 }
 
-#page-title {
-    background: rgba(48, 139, 182, 0.3);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0px 0px 150px #308BB6 ;
-    position: relative;
-    z-index: 10;
+yeee {
+  font-size: 60px;
+  position: relative;
+  top: 20px;
+  color: green;
+  animation-name: yeet;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(-.5, 1, .5, 7);
+  animation-iteration-count: infinite;
+  animation-duration: 8s;
 }
 
-#links-container {
-  height: 80%;
-  width: 80%;
-  background: rgba(48, 139, 182, 0.3);
-  box-shadow: 5px 5px 15px #308BB6 inset;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-around;
-  align-items: center;
+yeee:hover {
+  text-shadow: 0px 0px 20px blue;
 }
 
-.card {
-  text-decoration: none;
-  height: 300px;
-  width: 300px;
-  border-radius: 5px;
-  background: #308BB6;
-  opacity: 1;
-  padding: 15px;
+@keyframes yeet {
+  25%   {
+    top: 20px;
+    transform: rotateY(30deg);
+  }
+  50%   {
+    top: 40px;
+    transform: rotateY(180deg);
+  }
+  75%   {
+    top: 60px;
+    color: green;
+    transform: rotateY(45deg);
+  }
+  100%  {
+    top: 80px;
+    color: red;
+    transform: rotateY(360deg);
+  }
 }
 
-.card:hover {
-  color: #FFFFFF;
-  box-shadow: 5px 5px 3px;
+bees {
+  cursor: pointer;
+  max-width: auto;
+  max-height: auto;
+  font-size: 250%;
+  position: fixed;
+  top: 80%;
+  left: 10rem;
+  animation: .2s beez;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(1, -1, .2, -2);
+  background-color: yellow;
+  color: black;
+  padding: .5rem 1rem;
+  box-shadow: 0px 0px 100px yellow;
+  border-radius: 25px;
+  z-index: 300;
+  text-shadow: 0px 0px 100px black;
 }
 
-.card-title {
- background: black;
- opacity: 50;
+bees:hover {
+  animation-duration: .05s;
 }
 
-.card-body {
-
+@keyframes beez {
+  25% {
+    transform: rotateY(-20);
+  }
+  50% {
+    top: 78%;
+  }
+  75% {
+    transform: rotateY(20);
+  }
+  100% {
+    left: 13rem;
+    top: 82%;
+    background-color: black;
+    color: yellow;
+    box-shadow: 0px 0px 100px black;
+    text-shadow: 0px 0px 100px yellow;
+  }
 }
