@@ -4,43 +4,67 @@
   padding: none;
   margin: none;
   text-decoration: none;
-  list-style: none; }
+  list-style: none;
+  box-sizing: border-box; }
 
 a {
   color: inherit; }
+
+html {
+  height: 100%;
+  width: 100%; }
 
 body {
   background: black;
   color: white;
   font-family: 'Roboto', sans-serif;
-  margin: 0px; }
+  margin: 0px;
+  height: 100%;
+  width: 100%; }
 
 header {
   display: flex;
   flex-flow: row;
   align-items: center;
-  justify-content: space-around; }
+  justify-content: space-around;
+  height: 15%; }
 
 .accordion {
   background: green;
+  height: 85%;
   display: flex;
   flex-flow: row;
-  padding: 2rem;
   justify-content: space-around; }
 
 .accordion-label {
   display: block;
-  color: yellow;
-  transform: rotate(90deg); }
+  color: yellow; }
 
 .accordion-content {
   font-size: 0px; }
 
+.accordion-section {
+  animation: 0.6s close;
+  animation-fill-mode: both;
+  border: solid grey 1px;
+  padding: 1rem; }
+
+@keyframes close {
+  0% {
+    width: 75%; }
+  100% {
+    width: 12.5%; } }
+
 input[name='accordion'] {
   display: none; }
   input[name='accordion']:checked + .accordion-section {
-    background: purple; }
-    input[name='accordion']:checked + .accordion-section > .accordion-label {
-      transform: rotate(0deg); }
+    animation: 0.6s open;
+    animation-fill-mode: both; }
+
+@keyframes open {
+  0% {
+    width: 12.5%; }
+  100% {
+    width: 75%; } }
     input[name='accordion']:checked + .accordion-section > .accordion-content {
       font-size: 20px; }
