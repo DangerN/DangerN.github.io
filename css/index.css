@@ -1,0 +1,46 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: none;
+  margin: none;
+  text-decoration: none;
+  list-style: none; }
+
+a {
+  color: inherit; }
+
+body {
+  background: black;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 0px; }
+
+header {
+  display: flex;
+  flex-flow: row;
+  align-items: center;
+  justify-content: space-around; }
+
+.accordion {
+  background: green;
+  display: flex;
+  flex-flow: row;
+  padding: 2rem;
+  justify-content: space-around; }
+
+.accordion-label {
+  display: block;
+  color: yellow;
+  transform: rotate(90deg); }
+
+.accordion-content {
+  font-size: 0px; }
+
+input[name='accordion'] {
+  display: none; }
+  input[name='accordion']:checked + .accordion-section {
+    background: purple; }
+    input[name='accordion']:checked + .accordion-section > .accordion-label {
+      transform: rotate(0deg); }
+    input[name='accordion']:checked + .accordion-section > .accordion-content {
+      font-size: 20px; }
