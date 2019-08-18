@@ -38,13 +38,30 @@ header {
 
 .accordion-label {
   display: block;
-  color: yellow; }
+  color: yellow;
+  animation: 2.6s closeLabel;
+  animation-fill-mode: both; }
+
+@keyframes closeLabel {
+  0% {
+    transform: rotate(0); }
+  %100 {
+    transform: rotate(-90deg); } }
 
 .accordion-content {
-  font-size: 0px; }
+  animation: 2.6s closeContent;
+  animation-fill-mode: both; }
+
+@keyframes closeContent {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 
 .accordion-section {
-  animation: 0.6s close;
+  display: flex;
+  flex-flow: row;
+  animation: 2.6s close;
   animation-fill-mode: both;
   border: solid grey 1px;
   padding: 1rem; }
@@ -58,7 +75,7 @@ header {
 input[name='accordion'] {
   display: none; }
   input[name='accordion']:checked + .accordion-section {
-    animation: 0.6s open;
+    animation: 2.6s open;
     animation-fill-mode: both; }
 
 @keyframes open {
@@ -66,5 +83,21 @@ input[name='accordion'] {
     width: 12.5%; }
   100% {
     width: 75%; } }
+    input[name='accordion']:checked + .accordion-section > .accordion-label {
+      animation: 2.6s openLabel;
+      animation-fill-mode: both; }
+
+@keyframes openLabel {
+  0% {
+    transform: rotate(-90deg); }
+  100% {
+    transform: rotate(0deg); } }
     input[name='accordion']:checked + .accordion-section > .accordion-content {
-      font-size: 20px; }
+      animation: openContent 2.6s;
+      animation-fill-mode: both; }
+
+@keyframes openContent {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }

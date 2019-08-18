@@ -1,6 +1,6 @@
 $accordionCloseWidth: 12.5%;
 $accordionOpenWidth: 75%;
-$accordionTiming: .6s;
+$accordionTiming: 2.6s;
 
 * {
   text-decoration: none;
@@ -49,13 +49,34 @@ header {
 .accordion-label {
   display: block;
   color: yellow;
+  animation: $accordionTiming closeLabel;
+  animation-fill-mode: both;
+  @keyframes closeLabel {
+    0% {
+      transform: rotate(0);
+    }
+    %100 {
+      transform: rotate(-90deg);
+    }
+  }
 }
 
 .accordion-content {
-  font-size: 0px;
+  animation: $accordionTiming closeContent;
+  animation-fill-mode: both;
+  @keyframes closeContent {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 }
 
 .accordion-section {
+  display: flex;
+  flex-flow: row;
   animation: $accordionTiming close;
   animation-fill-mode: both;
   border: solid grey 1px;
@@ -83,8 +104,29 @@ input[name = 'accordion'] {
         width: $accordionOpenWidth;
         }
       }
+    > .accordion-label {
+      animation: $accordionTiming openLabel;
+      animation-fill-mode: both;
+      @keyframes openLabel {
+        0% {
+          transform: rotate(-90deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+    }
     > .accordion-content {
-      font-size: 20px;
+      animation: openContent $accordionTiming;
+      animation-fill-mode: both;
+      @keyframes openContent {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
     }
   }
 }
