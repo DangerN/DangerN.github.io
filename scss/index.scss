@@ -1,6 +1,4 @@
-$accordionCloseWidth: 12.5%;
-$accordionOpenWidth: 75%;
-$accordionTiming: 2.6s;
+@import 'variables', 'functions';
 
 * {
   text-decoration: none;
@@ -22,7 +20,7 @@ html {
 }
 
 body {
-  background: black;
+  background: map-get($theme-colors, 'primary');
   color: white;
   font-family: 'Roboto', sans-serif;
   margin: 0px;
@@ -39,7 +37,6 @@ header {
 }
 
 .accordion {
-  background: green;
   height: 85%;
   display: flex;
   flex-flow: row;
@@ -47,16 +44,21 @@ header {
 }
 
 .accordion-label {
-  display: block;
+  z-index: 10;
   color: yellow;
+  height: 2.5rem;
+  font-size: 2rem;
   animation: $accordionTiming closeLabel;
   animation-fill-mode: both;
+  position: relative;
   @keyframes closeLabel {
     0% {
-      transform: rotate(0);
+      transform: rotate(0deg);
+      top: 0px;
     }
-    %100 {
+    100% {
       transform: rotate(-90deg);
+      top: 100px;
     }
   }
 }
@@ -64,25 +66,34 @@ header {
 .accordion-content {
   animation: $accordionTiming closeContent;
   animation-fill-mode: both;
+  position: relative;
+  background: gold;
+  height: 500px;
+  width: 500px;
   @keyframes closeContent {
     0% {
       opacity: 1;
     }
     100% {
-      opacity: 0;
+      opacity: 0.2;
     }
   }
 }
 
 .accordion-section {
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
+  align-items: center;
+  overflow: hidden;
   animation: $accordionTiming close;
   animation-fill-mode: both;
-  border: solid grey 1px;
+  border: solid map-get($theme-colors, 'accent') 1px;
   padding: 1rem;
   @keyframes close {
     0% {
+      width: $accordionOpenWidth;
+    }
+    45% {
       width: $accordionOpenWidth;
     }
     100% {
@@ -100,6 +111,9 @@ input[name = 'accordion'] {
       0% {
         width: $accordionCloseWidth;
       }
+      45% {
+        width: $accordionCloseWidth;
+      }
       100% {
         width: $accordionOpenWidth;
         }
@@ -110,9 +124,21 @@ input[name = 'accordion'] {
       @keyframes openLabel {
         0% {
           transform: rotate(-90deg);
+          top: 150px;
+        }
+        45% {
+          top: 0px;
+          transform: rotate(-90deg);
+        }
+        55% {
+          transform: rotate(0deg);
+          top: 0px;
+          left: 0px;
         }
         100% {
           transform: rotate(0deg);
+          top: 0px;
+          left: center-position($accordionOpenWidth, $accordionLabelWidth);
         }
       }
     }
@@ -120,11 +146,19 @@ input[name = 'accordion'] {
       animation: openContent $accordionTiming;
       animation-fill-mode: both;
       @keyframes openContent {
-        0% {
-          opacity: 0;
+        // 0% {
+        //   opacity: 0;
+        //   right: -500px;
+        // }
+        45% {
+          right: -500px;
         }
+        // 55% {
+        //   // right: -500px;
+        // }
         100% {
           opacity: 1;
+          right: 0px;
         }
       }
     }

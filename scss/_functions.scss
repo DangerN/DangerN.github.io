@@ -1,0 +1,4 @@
+@function center-position($container-width, $element-width) {
+  $result: ($container-width - $element-width)/2;
+  @return $result;
+}
