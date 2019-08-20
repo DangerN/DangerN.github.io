@@ -1,0 +1,114 @@
+@import 'variables';
+
+@keyframes close {
+  0% {
+    width: $accordionOpenWidth;
+  }
+  45% {
+    width: $accordionOpenWidth;
+  }
+  100% {
+    width: $accordionCloseWidth;
+  }
+}
+
+@keyframes open {
+  0% {
+    width: $accordionCloseWidth;
+  }
+  45% {
+    width: $accordionCloseWidth;
+  }
+  100% {
+    width: $accordionOpenWidth;
+    }
+  }
+
+@keyframes openLabel {
+  0% {
+    transform: rotate(-90deg);
+    top: map-get($accordion, 'label-offset');
+  }
+  45% {
+    top: 0px;
+    transform: rotate(-90deg);
+  }
+  55% {
+    transform: rotate(0deg);
+    top: 0px;
+    left: 0px;
+  }
+  100% {
+    transform: rotate(0deg);
+    top: 0px;
+    left: center-position($accordionOpenWidth, $accordionLabelWidth);
+  }
+}
+
+@keyframes closeLabel {
+  0% {
+    transform: rotate(0deg);
+    top: 0px;
+    left: center-position($accordionOpenWidth, $accordionLabelWidth);
+  }
+  45% {
+    top: 0px;
+    transform: rotate(0deg);
+    left: 0px;
+  }
+  55% {
+    top: 0px;
+    transform: rotate(-90deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+    top: map-get($accordion, 'label-offset');
+  }
+}
+
+@keyframes openBar {
+  0% {
+    width: 0px;
+  }
+  55% {
+    width: 0px;
+  }
+  100% {
+    width: 150px;
+  }
+}
+
+@keyframes closeBar {
+  0% {
+    width: 150px;
+  }
+  45% {
+    width: 0px;
+  }
+  100% {
+    width: 0px;
+  }
+}
+
+@keyframes openContent {
+  0% {
+    opacity: 0;
+  }
+  45% {
+    right: -500px;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    right: 0px;
+  }
+}
+
+@keyframes closeContent {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

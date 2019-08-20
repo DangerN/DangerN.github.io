@@ -1,6 +1,6 @@
 $accordionCloseWidth: 10%;
 $accordionOpenWidth: 80%;
-$accordionTiming: 1.3s;
+$accordionTiming: 1s;
 $acccordionContentWidth: 60%;
 $accordionLabelWidth: 12%;
 $accordionLabelHeight: 20%;
@@ -8,14 +8,16 @@ $accordion: (
   'closeWidth': 10%,
   'openWidth': 80%,
   'animation-timing': 2s,
-  'content-width': 60%
+  'content-width': 600px,
+  'content-height': 600px,
+  'label-offset': 240px
 );
 $theme-colors: (
-  'primary': #2f67c3,
-  'accent': #c20517,
-  'shadow': #2d598f,
-  'alternate': #ad8070,
-  'background': purple
+  'primary': #6f6d69,
+  'accent': #ea1f49,
+  'shadow': #0e1818,
+  'alternate': #a59e96,
+  'background': white
 );
 $images: (
   'background-about': 'yeet'
