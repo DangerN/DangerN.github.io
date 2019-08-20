@@ -20,7 +20,6 @@ html {
 }
 
 body {
-  background: map-get($theme-colors, 'primary');
   color: white;
   font-family: 'Roboto', sans-serif;
   margin: 0px;
@@ -33,7 +32,9 @@ header {
   flex-flow: row;
   align-items: center;
   justify-content: space-around;
-  height: 15%;
+  height: 12%;
+  background: map-get($theme-colors, 'secondary');
+  color: map-get($theme-colors, 'primary');
 }
 
 .media-link {
@@ -44,7 +45,8 @@ header {
 }
 
 .accordion {
-  height: 85%;
+  color: map-get($theme-colors, secondary);
+  height: 88%;
   display: flex;
   flex-flow: row;
   justify-content: space-around;
@@ -79,7 +81,8 @@ header {
   flex-flow: column;
   align-items: center;
   overflow: hidden;
-  border: solid map-get($theme-colors, 'shadow') 1px;
+  border-width: 0px .5px;
+  background: map-get($theme-colors, 'primary');
   padding: 1.6rem;
 }
 
