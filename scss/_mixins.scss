@@ -8,5 +8,4 @@
 @mixin anim($animation) {
   animation: $accordionTiming $animation;
   animation-fill-mode: both;
-  @debug
 }

@@ -14,6 +14,11 @@ a {
   color: inherit;
 }
 
+html {
+  height: 100%;
+  width: 100%;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0px;
@@ -27,7 +32,7 @@ header {
   flex-flow: row;
   align-items: center;
   justify-content: space-around;
-  height: 12%;
+  height: 100% - map-get($accordion, 'height');
   background: map-get($theme-colors, 'secondary');
   color: map-get($theme-colors, 'primary');
 }
@@ -41,7 +46,7 @@ header {
 
 .accordion {
   color: map-get($theme-colors, secondary);
-  height: 88%;
+  // height: map-get($theme-colors, 'height');
   display: flex;
   flex-flow: row;
   justify-content: space-around;
