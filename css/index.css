@@ -132,7 +132,7 @@ header {
   justify-content: space-around; }
 
 .accordion-label {
-  animation: 1s closeLabel;
+  animation: 1.3s closeLabel;
   animation-fill-mode: both;
   z-index: 10;
   height: 2.5rem;
@@ -140,13 +140,13 @@ header {
   position: relative; }
 
 .accent-bar {
-  animation: 1s closeBar;
+  animation: 1.3s closeBar;
   animation-fill-mode: both;
   background: #0296E0;
   height: .3rem; }
 
 .accordion-content {
-  animation: 1s closeContent;
+  animation: 1.3s closeContent;
   animation-fill-mode: both;
   position: relative;
   height: 600px;
@@ -155,7 +155,7 @@ header {
   overflow: scroll; }
 
 .accordion-section {
-  animation: 1s close;
+  animation: 1.3s close;
   animation-fill-mode: both;
   display: flex;
   flex-flow: column;
@@ -168,14 +168,14 @@ header {
 input[name='accordion'] {
   display: none; }
   input[name='accordion']:checked + .accordion-section {
-    animation: 1s open;
+    animation: 1.3s open;
     animation-fill-mode: both; }
     input[name='accordion']:checked + .accordion-section > .accordion-label {
-      animation: 1s openLabel;
+      animation: 1.3s openLabel;
       animation-fill-mode: both; }
       input[name='accordion']:checked + .accordion-section > .accordion-label > .accent-bar {
-        animation: 1s openBar;
+        animation: 1.3s openBar;
         animation-fill-mode: both; }
     input[name='accordion']:checked + .accordion-section > .accordion-content {
-      animation: 1s openContent;
+      animation: 1.3s openContent;
       animation-fill-mode: both; }
