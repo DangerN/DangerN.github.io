@@ -14,17 +14,12 @@ a {
   color: inherit;
 }
 
-html {
-  height: 100%;
-  width: 100%;
-}
-
 body {
-  color: white;
   font-family: 'Roboto', sans-serif;
   margin: 0px;
   height: 100%;
   width: 100%;
+  background-color: map-get($theme-colors, 'primary');
 }
 
 header {
@@ -81,7 +76,6 @@ header {
   flex-flow: column;
   align-items: center;
   overflow: hidden;
-  border-width: 0px .5px;
   background: map-get($theme-colors, 'primary');
   padding: 1.6rem;
 }
