@@ -1,0 +1,12 @@
+@import 'variables', 'mixins', 'animations';
+
+#extra-button {
+  display: none;
+}
+
+#circle-1 {
+  cx: 50px;
+  cy: 50px;
+  r: 50;
+  fill: map-get($theme-colors, 'accent');
+}
