@@ -175,14 +175,21 @@
     z-index: -1; } }
 
 #extra-button {
-  display: none;
-  border: solid red 20px; }
+  display: none; }
 
 #circle-1 {
   cx: 50px;
   cy: 50px;
   r: 50;
   fill: #0296E0; }
+
+#extra-button:checked {
+  height: 10px;
+  color: yellow; }
+  #extra-button:checked + audio {
+    content: url(http://www.wavsource.com/snds_2018-06-03_5106726768923853/sfx/typewriter_click.wav); }
+  #extra-button:checked + label > svg circle {
+    fill: yellow; }
 
 * {
   text-decoration: none;
