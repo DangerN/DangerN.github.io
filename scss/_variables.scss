@@ -4,14 +4,20 @@ $accordionTiming: 1.3s;
 $acccordionContentWidth: 60%;
 $accordionLabelWidth: 12%;
 $accordionLabelHeight: 20%;
+$width-bp: 600px;
 $accordion: (
   'closeWidth': 10%,
   'openWidth': 80%,
   'animation-timing': 2s,
-  'content-width': 600px,
+  'content-width': 60%,
   'content-height': 600px,
   'label-offset': 240px,
   'height': 85%
+);
+$accordion-sm: (
+  'close-height': 4rem,
+  'open-height': 30rem,
+  'timing': .6s
 );
 $theme-colors: (
   'primary': #12131C,

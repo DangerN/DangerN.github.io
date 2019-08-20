@@ -7,6 +7,13 @@
     width: 10%;
     background-color: #12131C; } }
 
+@keyframes close-sm {
+  0% {
+    height: 30rem; }
+  100% {
+    height: 4rem;
+    background-color: #12131C; } }
+
 @keyframes open {
   0% {
     width: 10%; }
@@ -16,7 +23,14 @@
     width: 80%;
     background-color: #707072; } }
 
-@keyframes openLabel {
+@keyframes open-sm {
+  0% {
+    height: 4rem; }
+  100% {
+    height: 30rem;
+    background-color: #707072; } }
+
+@keyframes open-label {
   0% {
     transform: rotate(-90deg);
     top: 240px;
@@ -34,7 +48,15 @@
     left: 34%;
     color: #12131C; } }
 
-@keyframes closeLabel {
+@keyframes open-label-sm {
+  0% {
+    color: #707072;
+    left: 0rem; }
+  100% {
+    left: -3rem;
+    color: #12131C; } }
+
+@keyframes close-label {
   0% {
     transform: rotate(0deg);
     top: 0px;
@@ -52,7 +74,15 @@
     top: 240px;
     color: #707072; } }
 
-@keyframes openBar {
+@keyframes close-label-sm {
+  0% {
+    color: #12131C;
+    left: -3rem; }
+  100% {
+    color: #707072;
+    left: 0rem; } }
+
+@keyframes open-bar {
   0% {
     width: 0px; }
   55% {
@@ -60,7 +90,13 @@
   100% {
     width: 150px; } }
 
-@keyframes closeBar {
+@keyframes open-bar-sm {
+  0% {
+    width: 0px; }
+  100% {
+    width: 150px; } }
+
+@keyframes close-bar {
   0% {
     width: 150px; }
   45% {
@@ -68,7 +104,13 @@
   100% {
     width: 0px; } }
 
-@keyframes openContent {
+@keyframes close-bar-sm {
+  0% {
+    width: 150px; }
+  100% {
+    width: 0px; } }
+
+@keyframes open-content {
   0% {
     opacity: 0; }
   45% {
@@ -76,15 +118,19 @@
     opacity: 0; }
   100% {
     opacity: 1;
-    right: 0px;
-    z-index: 0; } }
+    right: 0px; } }
 
-@keyframes closeContent {
+@keyframes close-content {
   0% {
     opacity: 1; }
   100% {
-    opacity: 0;
-    z-index: -1; } }
+    opacity: 0; } }
+
+@keyframes open-content-sm {
+  100% { } }
+
+@keyframes close-content-sm {
+  100% { } }
 
 #extra-button {
   display: none; }

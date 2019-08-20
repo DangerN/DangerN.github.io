@@ -5,7 +5,13 @@
   @return $result;
 }
 
+
 @mixin anim($animation) {
-  animation: $accordionTiming $animation;
+  animation-duration: $accordionTiming;
   animation-fill-mode: both;
+  animation-name: $animation;
+  @media (max-width: $width-bp) {
+    animation-name: $animation + '-sm';
+    animation-duration: map-get($accordion-sm, 'timing');
+  }
 }
