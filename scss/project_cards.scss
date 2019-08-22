@@ -3,8 +3,9 @@
 #project-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, map-get($project-card, 'height'));
+  grid-template-rows: 60%;
   grid-gap: 1rem;
+  overflow: visible;
 }
 
 .project-description, .project-title {
@@ -13,7 +14,8 @@
 
 .project-card {
   background: map-get($theme-colors, 'secondary');
-  margin: 0px;
+  padding: .5rem;
+  box-shadow:  0px 0px 10px 15px map-get($theme-colors, 'secondary');
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -21,7 +23,13 @@
 }
 
 .project-image {
-  width: 60%;
+  width: 55%;
+}
+
+.project-links {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
 }
 
 .project-link-icon {

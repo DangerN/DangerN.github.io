@@ -135,22 +135,29 @@
 #project-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(3, 20rem);
-  grid-gap: 1rem; }
+  grid-template-rows: 60%;
+  grid-gap: 1rem;
+  overflow: visible; }
 
 .project-description, .project-title {
   color: #12131C; }
 
 .project-card {
   background: #F2F3FC;
-  margin: 0px;
+  padding: .5rem;
+  box-shadow: 0px 0px 10px 15px #F2F3FC;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: space-between; }
 
 .project-image {
-  width: 60%; }
+  width: 55%; }
+
+.project-links {
+  display: flex;
+  justify-content: space-around;
+  width: 80%; }
 
 .project-link-icon {
   height: 2rem; }
