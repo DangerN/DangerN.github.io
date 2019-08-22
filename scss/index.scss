@@ -47,7 +47,7 @@ header {
 
 .accordion {
   color: map-get($theme-colors, secondary);
-  // height: map-get($theme-colors, 'height');
+  height: map-get($accordion, 'height');
   display: flex;
   flex-flow: row;
   justify-content: space-around;
@@ -83,6 +83,7 @@ header {
   align-items: center;
   overflow: hidden;
   background: map-get($theme-colors, 'primary');
+  // height: map-get($accordion, 'height');
   padding: 1.6rem;
 }
 
