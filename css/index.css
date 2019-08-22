@@ -420,21 +420,21 @@
 #project-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 60%;
-  grid-gap: 1rem;
-  overflow: visible; }
+  grid-template-rows: 50%;
+  grid-gap: 1rem; }
 
 .project-description, .project-title {
-  color: #12131C; }
+  color: #F2F3FC; }
+
+.project-title {
+  align-self: flex-start; }
 
 .project-card {
-  background: #F2F3FC;
-  padding: .5rem;
-  box-shadow: inset 0px 0px 5px 5px #707072;
+  padding: 2rem;
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: space-between; }
+  justify-content: space-around; }
 
 .project-image {
   width: 55%; }
@@ -442,10 +442,17 @@
 .project-links {
   display: flex;
   justify-content: space-around;
-  width: 80%; }
+  width: 80%;
+  filter: invert(91%) sepia(1%) saturate(3911%) hue-rotate(200deg) brightness(106%) contrast(98%); }
+  .project-links :hover {
+    filter: invert(39%) sepia(79%) saturate(2455%) hue-rotate(175deg) brightness(99%) contrast(98%); }
 
 .project-link-icon {
   height: 2rem; }
+
+@media (max-width: 666px) {
+  #project-content {
+    grid-template-columns: 1fr; } }
 
 * {
   text-decoration: none;
@@ -483,7 +490,8 @@ header {
   height: 30px;
   width: 30px;
   margin-left: 15px;
-  margin-right: 15px; }
+  margin-right: 15px;
+  filter: invert(5%) sepia(27%) saturate(1011%) hue-rotate(196deg) brightness(93%) contrast(93%); }
 
 .accordion {
   color: #F2F3FC;
@@ -499,7 +507,7 @@ header {
   height: 2.5rem;
   font-size: 2rem;
   position: relative; }
-  @media (max-width: 600px) {
+  @media (max-width: 666px) {
     .accordion-label {
       animation-name: close-label-sm;
       animation-duration: 0.6s; } }
@@ -510,7 +518,7 @@ header {
   animation-name: close-bar;
   background: #0296E0;
   height: .3rem; }
-  @media (max-width: 600px) {
+  @media (max-width: 666px) {
     .accent-bar {
       animation-name: close-bar-sm;
       animation-duration: 0.6s; } }
@@ -524,7 +532,7 @@ header {
   width: 80%;
   margin-top: 1.3rem;
   overflow: scroll; }
-  @media (max-width: 600px) {
+  @media (max-width: 666px) {
     .accordion-content {
       animation-name: close-content-sm;
       animation-duration: 0.6s; } }
@@ -539,7 +547,7 @@ header {
   overflow: hidden;
   background: #12131C;
   padding: 1.6rem; }
-  @media (max-width: 600px) {
+  @media (max-width: 666px) {
     .accordion-section {
       animation-name: close-sm;
       animation-duration: 0.6s; } }
@@ -550,7 +558,7 @@ input[name='accordion'] {
     animation-duration: 1.3s;
     animation-fill-mode: both;
     animation-name: open; }
-    @media (max-width: 600px) {
+    @media (max-width: 666px) {
       input[name='accordion']:checked + .accordion-section {
         animation-name: open-sm;
         animation-duration: 0.6s; } }
@@ -558,7 +566,7 @@ input[name='accordion'] {
       animation-duration: 1.3s;
       animation-fill-mode: both;
       animation-name: open-label; }
-      @media (max-width: 600px) {
+      @media (max-width: 666px) {
         input[name='accordion']:checked + .accordion-section > .accordion-label {
           animation-name: open-label-sm;
           animation-duration: 0.6s; } }
@@ -566,7 +574,7 @@ input[name='accordion'] {
         animation-duration: 1.3s;
         animation-fill-mode: both;
         animation-name: open-bar; }
-        @media (max-width: 600px) {
+        @media (max-width: 666px) {
           input[name='accordion']:checked + .accordion-section > .accordion-label > .accent-bar {
             animation-name: open-bar-sm;
             animation-duration: 0.6s; } }
@@ -574,12 +582,12 @@ input[name='accordion'] {
       animation-duration: 1.3s;
       animation-fill-mode: both;
       animation-name: open-content; }
-      @media (max-width: 600px) {
+      @media (max-width: 666px) {
         input[name='accordion']:checked + .accordion-section > .accordion-content {
           animation-name: open-content-sm;
           animation-duration: 0.6s; } }
 
-@media (max-width: 600px) {
+@media (max-width: 666px) {
   header {
     height: 20%;
     flex-flow: column; }

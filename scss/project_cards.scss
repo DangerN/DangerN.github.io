@@ -3,23 +3,23 @@
 #project-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 60%;
+  grid-template-rows: 50%;
   grid-gap: 1rem;
-  overflow: visible;
+  // overflow: visible;
 }
 
 .project-description, .project-title {
-  color: map-get($theme-colors, primary);
+  color: map-get($theme-colors, 'secondary');
 }
-
+.project-title {
+  align-self: flex-start;
+}
 .project-card {
-  background: map-get($theme-colors, 'secondary');
-  padding: .5rem;
-  box-shadow: inset 0px 0px 5px 5px map-get($theme-colors, 'alternate');
+  padding: 2rem;
   display: flex;
   flex-flow: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .project-image {
@@ -30,8 +30,18 @@
   display: flex;
   justify-content: space-around;
   width: 80%;
+  filter: invert(91%) sepia(1%) saturate(3911%) hue-rotate(200deg) brightness(106%) contrast(98%);
+  :hover {
+    filter: invert(39%) sepia(79%) saturate(2455%) hue-rotate(175deg) brightness(99%) contrast(98%);
+  }
 }
 
 .project-link-icon {
   height: 2rem;
+}
+
+@media (max-width: $width-bp) {
+  #project-content {
+    grid-template-columns: 1fr;
+  }
 }

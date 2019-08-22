@@ -42,6 +42,7 @@ header {
   width: 30px;
   margin-left: 15px;
   margin-right: 15px;
+  filter: invert(5%) sepia(27%) saturate(1011%) hue-rotate(196deg) brightness(93%) contrast(93%);
 }
 
 .accordion {
