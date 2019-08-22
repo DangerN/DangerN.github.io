@@ -1,0 +1,29 @@
+@import 'variables', 'mixins', 'animations';
+
+#project-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, map-get($project-card, 'height'));
+  grid-gap: 1rem;
+}
+
+.project-description, .project-title {
+  color: map-get($theme-colors, primary);
+}
+
+.project-card {
+  background: map-get($theme-colors, 'secondary');
+  margin: 0px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-image {
+  width: 60%;
+}
+
+.project-link-icon {
+  height: 2rem;
+}
