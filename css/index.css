@@ -420,8 +420,7 @@
 #project-content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 50%;
-  grid-gap: 1rem; }
+  grid-gap: .5rem; }
 
 .project-description, .project-title {
   color: #F2F3FC; }
@@ -430,14 +429,11 @@
   align-self: flex-start; }
 
 .project-card {
-  padding: 2rem;
+  padding: 1rem;
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: space-around; }
-
-.project-image {
-  width: 55%; }
 
 .project-links {
   display: flex;
@@ -495,6 +491,7 @@ header {
 
 .accordion {
   color: #F2F3FC;
+  height: 85%;
   display: flex;
   flex-flow: row;
   justify-content: space-around; }
@@ -528,7 +525,7 @@ header {
   animation-fill-mode: both;
   animation-name: close-content;
   position: relative;
-  height: 600px;
+  height: 80%;
   width: 80%;
   margin-top: 1.3rem;
   overflow: scroll; }
