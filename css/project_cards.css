@@ -145,7 +145,7 @@
 .project-card {
   background: #F2F3FC;
   padding: .5rem;
-  box-shadow: 0px 0px 10px 15px #F2F3FC;
+  box-shadow: inset 0px 0px 5px 5px #707072;
   display: flex;
   flex-flow: column;
   align-items: center;

@@ -15,7 +15,7 @@
 .project-card {
   background: map-get($theme-colors, 'secondary');
   padding: .5rem;
-  box-shadow:  0px 0px 10px 15px map-get($theme-colors, 'secondary');
+  box-shadow: inset 0px 0px 5px 5px map-get($theme-colors, 'alternate');
   display: flex;
   flex-flow: column;
   align-items: center;
