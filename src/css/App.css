@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Lobster+Two:700|Oswald:300&display=swap);
+body, #root, #app {
+  height: 100vh;
+  width: 100vw;
+  margin: 0; }
+
+a {
+  color: inherit;
+  text-decoration: inherit; }
+
+.header {
+  height: 15vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  font-family: "Lobster Two", cursive; }
+  .header .name {
+    font-size: 2rem;
+    margin: 0 2rem 0 0; }
+  .header .title {
+    font-size: 2.6rem; }
+  .header .links {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-around; }
+    .header .links .link {
+      margin: 0 .6rem; }
+
+.accordion {
+  height: 85vh;
+  display: flex;
+  flex-flow: wrap;
+  align-items: center;
+  justify-content: space-between; }
+  .accordion .section {
+    display: flex;
+    flex-flow: column; }
+    .accordion .section .content {
+      background: blue;
+      opacity: 0; }
+      .accordion .section .content.open {
+        background: green;
+        opacity: 1; }

@@ -1,0 +1,46 @@
+@import "variables"
+
+body, #root, #app
+  height: 100vh
+  width: 100vw
+  margin: 0
+
+a
+  color: inherit
+  text-decoration: inherit
+
+.header
+  height: $header-height
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  padding: 0 5vw
+  font-family: $display-font
+  .name
+    font-size: 2rem
+    margin: 0 2rem 0 0
+  .title
+    font-size: 2.6rem
+  .links
+    display: flex
+    flex-flow: wrap
+    justify-content: space-around
+    .link
+      margin: 0 .6rem
+
+.accordion
+  height: $accordion-height
+  display: flex
+  flex-flow: wrap
+  align-items: center
+  justify-content: space-between
+  .section
+    display: flex
+    flex-flow: column
+    .content
+      background: blue
+      opacity: 0
+      &.open
+        background: green
+        opacity: 1
