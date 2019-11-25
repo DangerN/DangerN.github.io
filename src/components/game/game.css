@@ -1,0 +1,9 @@
+.game-window {
+  width: 400px;
+  height: 500px;
+  background: black;
+}
+
+.ship {
+  position: relative;
+}

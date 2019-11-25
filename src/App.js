@@ -10,6 +10,8 @@ export default () => {
 
   const [state, dispatch] = useAppState()
 
+  
+
   return (
     <div id='app'>
       <Header />

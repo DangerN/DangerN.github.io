@@ -4,6 +4,9 @@ body, #root, #app {
   width: 100vw;
   margin: 0; }
 
+* {
+  box-sizing: border-box; }
+
 a {
   color: inherit;
   text-decoration: inherit; }
@@ -15,7 +18,9 @@ a {
   align-items: center;
   justify-content: space-between;
   padding: 0 5vw;
-  font-family: "Lobster Two", cursive; }
+  font-family: "Lobster Two", cursive;
+  background-color: #F2F3FC;
+  color: #12131C; }
   .header .name {
     font-size: 2rem;
     margin: 0 2rem 0 0; }
@@ -30,16 +35,59 @@ a {
 
 .accordion {
   height: 85vh;
+  font-family: "Oswald", sans-serif;
   display: flex;
   flex-flow: wrap;
   align-items: center;
   justify-content: space-between; }
   .accordion .section {
     display: flex;
-    flex-flow: column; }
+    flex-flow: column;
+    align-items: center;
+    padding: 1.5rem 0 0 0;
+    height: 100%;
+    width: 10%;
+    background: #12131C;
+    color: #F2F3FC; }
+    .accordion .section .section-title {
+      color: #707072;
+      font-size: 2.5rem;
+      position: relative;
+      transform: rotate(-90deg);
+      top: 30%; }
+    .accordion .section.open {
+      width: 70%;
+      background: #707072; }
+      .accordion .section.open .section-title {
+        color: #12131C;
+        left: 20%;
+        top: 0;
+        transform: rotate(0deg);
+        margin: 0 0 1rem 0; }
+        .accordion .section.open .section-title .accent-bar {
+          background: #0296E0;
+          height: .5rem;
+          width: 8rem; }
     .accordion .section .content {
-      background: blue;
-      opacity: 0; }
+      opacity: 0;
+      display: flex;
+      flex-flow: wrap;
+      justify-content: space-around;
+      overflow: scroll; }
+      .accordion .section .content .project-card {
+        flex-grow: 1;
+        max-width: 300px;
+        max-height: 260px;
+        padding: 1rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between; }
+        .accordion .section .content .project-card .project-description {
+          margin: 1rem 0; }
+        .accordion .section .content .project-card .links {
+          display: flex;
+          justify-content: space-around; }
+      .accordion .section .content .news-article {
+        width: 80%; }
       .accordion .section .content.open {
-        background: green;
         opacity: 1; }

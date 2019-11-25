@@ -5,6 +5,9 @@ body, #root, #app
   width: 100vw
   margin: 0
 
+*
+  box-sizing: border-box
+
 a
   color: inherit
   text-decoration: inherit
@@ -17,6 +20,8 @@ a
   justify-content: space-between
   padding: 0 5vw
   font-family: $display-font
+  background-color: $sec-color
+  color: $pri-color
   .name
     font-size: 2rem
     margin: 0 2rem 0 0
@@ -31,6 +36,7 @@ a
 
 .accordion
   height: $accordion-height
+  font-family: $regular-font
   display: flex
   flex-flow: wrap
   align-items: center
@@ -38,9 +44,51 @@ a
   .section
     display: flex
     flex-flow: column
+    align-items: center
+    padding: 1.5rem 0 0 0
+    height: 100%
+    width: 10%
+    background: $pri-color
+    color: $sec-color
+    .section-title
+      color: $alt-color
+      font-size: 2.5rem
+      position: relative
+      transform: rotate(-90deg)
+      top: 30%
+    &.open
+      width: 70%
+      background: $alt-color
+      .section-title
+        color: $pri-color
+        left: 20%
+        top: 0
+        transform: rotate(0deg)
+        margin: 0 0 1rem 0
+        .accent-bar
+          background: $acc-color
+          height: .5rem
+          width: 8rem
     .content
-      background: blue
       opacity: 0
+      display: flex
+      flex-flow: wrap
+      justify-content: space-around
+      overflow: scroll
+      .project-card
+        flex-grow: 1
+        max-width: 300px
+        max-height: 260px
+        padding: 1rem
+        display: flex
+        flex-flow: column
+        justify-content: space-between
+        .project-description
+          margin: 1rem 0
+        .links
+          display: flex
+          justify-content: space-around
+      .news-article
+        width: 80%
       &.open
-        background: green
         opacity: 1
