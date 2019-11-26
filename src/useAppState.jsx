@@ -2,7 +2,7 @@ import { useReducer } from 'react'
 
 export default () => {
   const initialState = {
-    accordionTab: 'projects'
+    accordionTab: 'game'
   }
   const reducer = (state, action) => {
     switch (action.type) {

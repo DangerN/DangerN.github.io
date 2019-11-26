@@ -1,5 +1,11 @@
 export default [
   {
+    name: 'Personal Website',
+    description: 'The very site you are looking at! Recently renovated as a React app.',
+    live_link: 'http://crystalneal.com',
+    github_link: 'https://github.com/DangerN/bezier-curver'
+  },
+  {
     name: 'Bezier Curver',
     description: 'This app is designed to help visualize different values for the cubic bezier animation timing function as it pertains to CSS styling.',
     live_link: 'http://crystalneal.com/bezier-curver/',

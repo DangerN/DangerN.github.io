@@ -34,7 +34,7 @@ export default props => {
         Projects
         <div className='accent-bar'/>
       </div>
-      { content() }
+      { state.accordionTab === 'projects' ? content() : null }
     </div>
   )
 }

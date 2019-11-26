@@ -7,10 +7,10 @@ export default props => {
   const newsStories = () => {
     return NEWS.map(article=>{
       return (
-        <div className='news-article'>
-          <div className='title'>{article.title}</div>
-          <div className='date'>{article.date}</div>
-          <div className='text'>{article.text}</div>
+        <div className='news-article' key={article.date}>
+          <h2 className='title'>{article.title}</h2>
+          <p className='date'>{article.date}</p>
+          <p className='text'>{article.text}</p>
         </div>
       )
     })
@@ -28,7 +28,7 @@ export default props => {
         News
         <div className='accent-bar'/>
       </div>
-      { content() }
+      { state.accordionTab === 'news' ? content() : null }
     </div>
   )
 }

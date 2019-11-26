@@ -89,5 +89,7 @@ a {
           justify-content: space-around; }
       .accordion .section .content .news-article {
         width: 80%; }
+      .accordion .section .content .about {
+        width: 80%; }
       .accordion .section .content.open {
         opacity: 1; }
