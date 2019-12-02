@@ -2,6 +2,7 @@
   "name": "dangern.github.io",
   "version": "0.1.0",
   "private": true,
+  "homepage": "htttp://crystalneal.com/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0",
