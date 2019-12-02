@@ -8,7 +8,7 @@ import Game from './Game'
 
 export default props => {
   const isNarrow = useMediaQuery('(max-width: 600px)')
-  const { state, dispatch } = props
+  const { dispatch } = props
   const setTabFocus = tab => {
     return dispatch({type: 'accordionTab', accordionTab: tab})
   }

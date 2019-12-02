@@ -4,7 +4,7 @@ import { FaEye, FaGithub } from 'react-icons/fa'
 import PROJECTS from '../projects.js'
 
 export default props => {
-  const { state, dispatch, setTabFocus, isNarrow } = props
+  const { state, setTabFocus, isNarrow } = props
 
   const projectCards =() => {
     return PROJECTS.map(project=>{

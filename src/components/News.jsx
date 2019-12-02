@@ -3,7 +3,7 @@ import React from 'react'
 import NEWS from '../news.js'
 
 export default props => {
-  const { state, dispatch, setTabFocus, isNarrow } = props
+  const { state, setTabFocus, isNarrow } = props
   const newsStories = () => {
     return NEWS.map(article=>{
       return (

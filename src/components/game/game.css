@@ -1,7 +1,7 @@
 .game-window {
   width: 400px;
   height: 500px;
-  background: black;
+  background: #12131C;
   position: relative;
   overflow: hidden;
 }
@@ -16,7 +16,7 @@
 
 .overlay {
   position: absolute;
-  background: blue;
+  background: #12131C;
   width: 100%;
   height: 100%;
   display: flex;

@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { GiSpaceship } from 'react-icons/gi'
 
-import Rocket from './Rocket'
 import Overlay from './Overlay'
 
 import useGameState from './useGameState'
@@ -12,7 +11,7 @@ const Ship = props => {
   const { shipPos } = props
   return (
     <div className='ship' style={{top: `${shipPos.y}px`, left: `${shipPos.x}px`}}>
-      <GiSpaceship color={'#F2F3FC'} size='50px'/>
+      <GiSpaceship color={'#0296E0'} size='50px'/>
     </div>
   )
 }
@@ -39,6 +38,7 @@ export const GameWindow = () => {
       window.removeEventListener('keydown', handleKeyDown)
       window.removeEventListener('keyup', handleKeyUp)
     }
+  // eslint-disable-next-line
   }, [])
 
   const renderActors = () => {
@@ -51,7 +51,7 @@ export const GameWindow = () => {
     <div className='game-window'>
       <Ship {...state} dispatch={dispatch} />
       { renderActors() }
-      { state.paused ? <Overlay /> : null}
+      { state.paused ? <Overlay {...state} /> : null}
     </div>
   )
 }

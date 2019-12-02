@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default props => {
-  const { state, dispatch, setTabFocus, isNarrow } = props
+  const { state, setTabFocus, isNarrow } = props
   const content = () => {
     return (
       <div className={isOpen() ? 'content open' : 'content'}>

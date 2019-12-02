@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Lobster+Two:700|Oswald:300&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Lobster+Two:700|Fira+Sans&display=swap);
 body, #root, #app {
   height: 100vh;
   width: 100vw;
@@ -34,7 +34,7 @@ a {
 
 .accordion {
   height: 85vh;
-  font-family: "Oswald", sans-serif;
+  font-family: "Fira Sans", sans-serif;
   display: flex;
   flex-flow: wrap;
   align-items: center;

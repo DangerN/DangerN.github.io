@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect, useState } from 'react'
+import { useReducer, useEffect } from 'react'
 
 import GC from './game_constants'
 
@@ -19,10 +19,7 @@ export default () => {
     shipCollide: false,
   }
 
-  const [ lastFrame, setLastFrame ] = useState(0)
-
   const reducer = (state, action) => {
-    console.log(state.shipCollide);
     switch (action.type) {
       case 'newActor':
         const newActors = state.actors
@@ -33,13 +30,16 @@ export default () => {
         GC.processActors(updatedActors)
         return {
           ...state,
-          ...GC.detectCollision({paused: state.paused, shipPos: state.shipPos, actors: updatedActors}),
+          ...GC.detectCollision({shipPos: state.shipPos, actors: updatedActors}),
           actors: GC.filterActors(updatedActors)
         }
       case 'frame':
-        return state.paused ? state : {...state, frame: action.frame}
+        const newFrame = state.frame + 1
+        return state.paused ? state : {...state, frame: newFrame}
       case 'paused':
         return {...state, paused: action.paused}
+      case 'reset':
+        return {...state, shipPos: {x: 175, y: 300}, frame: 0, actors: [], shipCollide: false, gameStatus: 'new'}
       default:
         if (Object.keys(state).includes(action.type)) {
           return {...state, [action.type]: action[action.type]}
@@ -48,10 +48,6 @@ export default () => {
     }
   }
   const [state, dispatch] = useReducer(reducer, initialState)
-
-  const tick = () => {
-    dispatch({type: 'frame', frame: state.frame += 1})
-  }
 
   useEffect(() => {
     const newShipPos = state.shipPos
@@ -69,23 +65,28 @@ export default () => {
     GC.clampShipPos(newShipPos, allowedRange)
     dispatch({type: 'shipPos', shipPos: newShipPos})
 
-    state.fire && GC.fire()
-
+    //create a new asteroid every 100 frames
     state.frame % 100 === 0 && dispatch({type: 'newActor', actor: GC.createActorProps.asteroid(state.frame)})
-
-    console.log('frame', state.frame);
 
     dispatch({type: 'updateActors'})
 
   },[state.frame])
 
+  // handles user pressing enter/return.
   useEffect(() => {
-
+    state.confirm && state.gameStatus === 'over' && dispatch({type: 'reset'})
     state.confirm && dispatch({type: 'paused', paused: false})
   },[state.confirm])
 
+  // watches shipCollide to change gameStatus and paused.
   useEffect(() => {
-    const tickInterval = setInterval(tick, 10)
+    state.shipCollide && dispatch({type: 'gameStatus', gameStatus: 'over'})
+    state.shipCollide && dispatch({type: 'paused', paused: true})
+  },[state.shipCollide])
+
+  // sets interval to increase frame count
+  useEffect(() => {
+    const tickInterval = setInterval(()=>dispatch({type: 'frame'}), 10)
     return () => {
       clearInterval(tickInterval)
     }

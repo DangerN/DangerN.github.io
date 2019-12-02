@@ -1,7 +1,6 @@
 import React from 'react'
 
-import Asteroid from './Asteroid'
-import Rocket from './Rocket'
+import Block from './Block'
 
 const U = {
   randRange: range => {
@@ -59,11 +58,8 @@ const GC = {
   actorMap: {
     asteroid: actor => {
       const { x, y, size, key } = actor
-      return <Asteroid key={key} size={size} style={{top: `${y}px`, left: `${x}px`}} />
+      return <Block key={key} size={size} style={{top: `${y}px`, left: `${x}px`}} />
     },
-    rocket: actor => {
-      return <Rocket />
-    }
   },
   // mutates actors
   processActors: actors => {
@@ -88,7 +84,7 @@ const GC = {
     })
   },
   detectCollision: props => {
-    const { shipPos, actors, paused } = props
+    const { shipPos, actors } = props
     let shipCollide = false
     actors.forEach(actor => {
       const actXSpan = actor.x + actor.size
@@ -103,8 +99,7 @@ const GC = {
       ) { return }
       shipCollide = true
     })
-    if ( paused === true ) {return {paused: true}}
-    return {'paused': shipCollide}
+    return {'shipCollide': shipCollide}
   }
 }
 

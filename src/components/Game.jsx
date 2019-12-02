@@ -5,7 +5,7 @@ import GameWindow from './game/GameWindow'
 
 
 export default props => {
-  const { state, dispatch, setTabFocus, isNarrow } = props
+  const { state, setTabFocus, isNarrow } = props
   const isDesktop = useMediaQuery('(min-width: 700px)')
 
   const content = () => {
