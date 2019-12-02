@@ -1,0 +1,131 @@
+@import "variables"
+
+body, #root, #app
+  height: 100vh
+  width: 100vw
+  margin: 0
+
+*
+  box-sizing: border-box
+
+a
+  color: inherit
+  text-decoration: inherit
+
+.header
+  height: $header-height
+  display: flex
+  flex-direction: row
+  align-items: center
+  justify-content: space-between
+  padding: 0 5vw
+  font-family: $display-font
+  background-color: $sec-color
+  color: $pri-color
+  .name
+    font-size: 2rem
+  .title
+    font-size: 2.6rem
+  .links
+    display: flex
+    flex-flow: wrap
+    justify-content: space-around
+    .link
+      margin: 0 .6rem
+
+.accordion
+  height: $accordion-height
+  font-family: $regular-font
+  display: flex
+  flex-flow: wrap
+  align-items: center
+  justify-content: space-between
+  .section
+    display: flex
+    flex-flow: column
+    align-items: center
+    padding: 1.5rem 0 0 0
+    height: 100%
+    width: 10%
+    background: $pri-color
+    color: $sec-color
+    transition: width .6s
+    .section-title
+      color: $alt-color
+      font-size: 2.5rem
+      position: relative
+      transform: rotate(-90deg)
+      top: 30%
+    &.open
+      width: 70%
+      background: $alt-color
+      .section-title
+        color: $pri-color
+        left: 20%
+        top: 0
+        transform: rotate(0deg)
+        margin: 0 0 1rem 0
+        .accent-bar
+          background: $acc-color
+          height: .5rem
+          width: 8rem
+    .content
+      opacity: 0
+      display: flex
+      flex-flow: wrap
+      justify-content: space-around
+      overflow: scroll
+      animation: 0.6s linear forwards opencontent
+      .project-card
+        flex-grow: 1
+        max-width: 300px
+        max-height: 260px
+        padding: 1rem
+        display: flex
+        flex-flow: column
+        justify-content: space-between
+        .project-description
+          margin: 1rem 0
+        .links
+          display: flex
+          justify-content: space-around
+      .news-article
+        width: 80%
+      .about
+        width: 80%
+      &.open
+        opacity: 1
+
+@keyframes opencontent
+  from
+    opacity: 0
+  85%
+    opacity: 0
+  to
+    opacity: 1
+
+@media screen and (max-width: 600px)
+  .header
+    flex-direction: column
+    position: relative
+    height: auto
+    width: auto
+    div
+      margin: .4rem 0rem
+  .accordion
+    flex-direction: column
+    position: relative
+    height: auto
+    width: auto
+    .section
+      width: 100vw
+      &:nth-child(2)
+        order: -1
+      &:last-child
+        padding-bottom: 5rem
+      .section-title
+        transform: rotate(0deg)
+      &.open
+          width: 100vw
+      .content
+        max-height: 70vh
