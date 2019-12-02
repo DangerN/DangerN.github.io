@@ -3,7 +3,7 @@ export default [
     name: 'Personal Website',
     description: 'The very site you are looking at! Recently renovated as a React app.',
     live_link: 'http://crystalneal.com',
-    github_link: 'https://github.com/DangerN/bezier-curver'
+    github_link: 'https://github.com/DangerN/DangerN.github.io'
   },
   {
     name: 'Bezier Curver',
