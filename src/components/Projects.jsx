@@ -4,7 +4,8 @@ import { FaEye, FaGithub } from 'react-icons/fa'
 import PROJECTS from '../projects.js'
 
 export default props => {
-  const { state, dispatch, setTabFocus } = props
+  const { state, dispatch, setTabFocus, isNarrow } = props
+
   const projectCards =() => {
     return PROJECTS.map(project=>{
       return (
@@ -19,22 +20,30 @@ export default props => {
       )
     })
   }
+
   const content = () => {
     return (
-      <div className={state.accordionTab === 'projects' ? 'content open' : 'content'}>
+      <div className={isOpen() ? 'content open' : 'content'}>
         { projectCards() }
       </div>
     )
   }
+
+  const isOpen = () => {
+    if (state.accordionTab === 'projects') {return true}
+    if (isNarrow) {return true}
+    return false
+  }
+
   return (
     <div
-      className={state.accordionTab === 'projects' ? 'section open' : 'section'}
+      className={isOpen() ? 'section open' : 'section'}
       onClick={()=>setTabFocus('projects')}>
       <div className='section-title'>
         Projects
         <div className='accent-bar'/>
       </div>
-      { state.accordionTab === 'projects' ? content() : null }
+      { isOpen() ? content() : null }
     </div>
   )
 }

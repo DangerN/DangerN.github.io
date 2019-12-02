@@ -1,20 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import { GiSpaceship } from 'react-icons/gi'
 
+import Rocket from './Rocket'
+import Overlay from './Overlay'
+
 import useGameState from './useGameState'
 import GC from './game_constants'
 import './game.css'
-
-export const Controls = () => {
-  return (
-    <div className='controls'>
-      <p>move - wasd</p>
-      <p>fire - space</p>
-      <p>cancel - backspace</p>
-      <p>confirm - return</p>
-    </div>
-  )
-}
 
 const Ship = props => {
   const { shipPos } = props
@@ -49,13 +41,19 @@ export const GameWindow = () => {
     }
   }, [])
 
-  // const game = document.querySelector('.game-window')
-
-  // if (game) console.log(game.getBoundingClientRect());
+  const renderActors = () => {
+    return state.actors.map(actor=>{
+      return GC.actorMap[actor.type](actor)
+    })
+  }
 
   return (
     <div className='game-window'>
       <Ship {...state} dispatch={dispatch} />
+      { renderActors() }
+      { state.paused ? <Overlay /> : null}
     </div>
   )
 }
+
+export default GameWindow

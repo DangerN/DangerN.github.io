@@ -3,7 +3,7 @@ import React from 'react'
 import NEWS from '../news.js'
 
 export default props => {
-  const { state, dispatch, setTabFocus } = props
+  const { state, dispatch, setTabFocus, isNarrow } = props
   const newsStories = () => {
     return NEWS.map(article=>{
       return (
@@ -17,18 +17,26 @@ export default props => {
   }
   const content = () => {
     return (
-      <div className={state.accordionTab === 'news' ? 'content open' : 'content'}>
+      <div className={ isOpen() ? 'content open' : 'content'}>
         { newsStories() }
       </div>
     )
   }
+
+  const isOpen = () => {
+    if (state.accordionTab === 'news') {return true}
+    if (isNarrow) {return true}
+    return false
+  }
+
+
   return (
-    <div className={state.accordionTab === 'news' ? 'section open' : 'section'} onClick={()=>setTabFocus('news')}>
+    <div className={isOpen() ? 'section open' : 'section'} onClick={()=>setTabFocus('news')}>
       <div className='section-title'>
         News
         <div className='accent-bar'/>
       </div>
-      { state.accordionTab === 'news' ? content() : null }
+      { isOpen() ? content() : null }
     </div>
   )
 }

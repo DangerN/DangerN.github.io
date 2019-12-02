@@ -1,28 +1,34 @@
 import React from 'react'
 import useMediaQuery from 'use-media-query-hook'
 
-import { GameWindow, Controls } from './game/GameWindow'
+import GameWindow from './game/GameWindow'
 
 
 export default props => {
-  const { state, dispatch, setTabFocus } = props
+  const { state, dispatch, setTabFocus, isNarrow } = props
   const isDesktop = useMediaQuery('(min-width: 700px)')
 
   const content = () => {
     return (
-      <div className={state.accordionTab === 'game' ? 'content open' : 'content'}>
-        { isDesktop ? <><GameWindow /><Controls /></> : 'Please visit on desktop to play.'}
+      <div className={ isOpen() ? 'content open' : 'content'}>
+        { isDesktop ? <GameWindow /> : 'Please visit on desktop to play.'}
       </div>
     )
   }
 
+  const isOpen = () => {
+    if (state.accordionTab === 'game') {return true}
+    if (isNarrow) {return true}
+    return false
+  }
+
   return (
-    <div className={state.accordionTab === 'game' ? 'section open' : 'section'} onClick={()=>setTabFocus('game')}>
+    <div className={ isOpen() ? 'section open' : 'section'} onClick={()=>setTabFocus('game')}>
       <div className='section-title'>
         Game
         <div className='accent-bar'/>
       </div>
-      { state.accordionTab === 'game' ? content() : null }
+      { isOpen() ? content() : null }
     </div>
   )
 }

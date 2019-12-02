@@ -24,7 +24,6 @@ a
   color: $pri-color
   .name
     font-size: 2rem
-    margin: 0 2rem 0 0
   .title
     font-size: 2.6rem
   .links
@@ -50,6 +49,7 @@ a
     width: 10%
     background: $pri-color
     color: $sec-color
+    transition: width .6s
     .section-title
       color: $alt-color
       font-size: 2.5rem
@@ -75,6 +75,7 @@ a
       flex-flow: wrap
       justify-content: space-around
       overflow: scroll
+      animation: 0.6s linear forwards opencontent
       .project-card
         flex-grow: 1
         max-width: 300px
@@ -94,3 +95,37 @@ a
         width: 80%
       &.open
         opacity: 1
+
+@keyframes opencontent
+  from
+    opacity: 0
+  85%
+    opacity: 0
+  to
+    opacity: 1
+
+@media screen and (max-width: 600px)
+  .header
+    flex-direction: column
+    position: relative
+    height: auto
+    width: auto
+    div
+      margin: .4rem 0rem
+  .accordion
+    flex-direction: column
+    position: relative
+    height: auto
+    width: auto
+    .section
+      width: 100vw
+      &:nth-child(2)
+        order: -1
+      &:last-child
+        padding-bottom: 5rem
+      .section-title
+        transform: rotate(0deg)
+      &.open
+          width: 100vw
+      .content
+        max-height: 70vh
