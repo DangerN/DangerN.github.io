@@ -1,25 +1,38 @@
 {
   "name": "dangern.github.io",
-  "version": "1.0.0",
-  "description": "##AR Puzzle Game",
-  "main": "index.js",
-  "scripts": {
-    "start": "lite-server",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch scss -o css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DangerN/DangerN.github.io.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DangerN/DangerN.github.io/issues"
-  },
-  "homepage": "https://github.com/DangerN/DangerN.github.io#readme",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "lite-server": "^2.5.3",
-    "node-sass": "^4.12.0"
+    "gh-pages": "^2.1.1",
+    "node-sass": "^4.13.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-icons": "^3.8.0",
+    "react-scripts": "3.2.0",
+    "use-media-query-hook": "^0.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "scss": "node-sass --watch src/scss -o src/css",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
