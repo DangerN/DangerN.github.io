@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaEye, FaGithub } from 'react-icons/fa'
+import { FaEye, FaYoutube, FaGithub } from 'react-icons/fa'
 
 import PROJECTS from '../projects.js'
 
@@ -14,6 +14,7 @@ export default props => {
           <div className='project-description'>{project.description}</div>
           <div className='links'>
             { project.live_link ? <a className='live-link' href={project.live_link}><FaEye size={25} /></a> : null }
+            { project.demo_link ? <a className='live-link' href={project.demo_link}><FaYoutube size={25} /></a> : null }
             { project.github_link ? <a className='live-link' href={project.github_link}><FaGithub size={25} /></a> : null }
           </div>
         </div>

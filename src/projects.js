@@ -24,8 +24,8 @@ export default [
     name: 'AR Game',
     description: 'An augmented reality game intended to be played with paper markers and a smart phone. Built with Rails and AR.js',
     live_link: 'https://crystalneal.com/AR-game/',
-    demo_link: 'https://youtu.be/EG7amDsmo-8',
-    github_link: 'https://youtu.be/rGR9RfoXKF8'
+    demo_link: 'https://youtu.be/rGR9RfoXKF8',
+    github_link: 'https://github.com/DangerN/AR-game'
   },
   {
     name: 'Personal Website',
@@ -38,11 +38,5 @@ export default [
     description: 'The next iteration of Fitness Tracker, built on React! Features include tracking excercise progression, recording food and drink, and a robust list of excercise instructions. Some features still in development.',
     live_link: '',
     github_link: 'https://github.com/DangerN/fitnessTracker'
-  },
-  {
-    name: 'Fitness Tracker',
-    description: 'An app designed to help track workouts and fitness goals. Written in JavaScript with a Rails backend.',
-    live_link: '',
-    github_link: 'https://github.com/DangerN/mod-3-client'
-  },
+  }
 ]
