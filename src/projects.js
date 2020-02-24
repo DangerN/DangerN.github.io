@@ -12,16 +12,16 @@ export default [
     github_link: 'https://github.com/DangerN/bezier-curver'
   },
   {
-    name: 'Fitness Tracker v2',
-    description: 'The next iteration of Fitness Tracker, built on React! Features include tracking excercise progression, recording food and drink, and a robust list of excercise instructions. Some features still in development.',
-    live_link: '',
-    github_link: 'https://github.com/DangerN/fitnessTracker'
-  },
-  {
     name: 'AR Game',
     description: 'An augmented reality game intended to be played with paper markers and a smart phone. Built with Rails and AR.js',
     live_link: 'https://crystalneal.com/AR-game/',
     github_link: 'https://github.com/DangerN/AR-game'
+  },
+  {
+    name: 'Fitness Tracker v2',
+    description: 'The next iteration of Fitness Tracker, built on React! Features include tracking excercise progression, recording food and drink, and a robust list of excercise instructions. Some features still in development.',
+    live_link: '',
+    github_link: 'https://github.com/DangerN/fitnessTracker'
   },
   {
     name: 'Fitness Tracker',

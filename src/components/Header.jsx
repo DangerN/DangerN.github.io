@@ -9,7 +9,7 @@ export default () => {
   return (
     <div className='header'>
       <div className='name'>
-        Crystal Neal
+        Chris Neal
       </div>
       <div className='title'>
         Web App Developer
