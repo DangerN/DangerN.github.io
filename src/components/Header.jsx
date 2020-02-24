@@ -16,9 +16,9 @@ export default () => {
       </div>
       <div className='links'>
         <a className='link' href='https://github.com/DangerN'><FaGithub size='30'/></a>
-        <a className='link' href='https://www.linkedin.com/in/crystal-n/'><FaLinkedin size='30'/></a>
+        <a className='link' href='https://www.linkedin.com/in/chris-n/'><FaLinkedin size='30'/></a>
         <a className='link' href='mailto:cdneal091@gmail.com'><MdEmail size='30'/></a>
-        <a className='link' href='https://resume.creddle.io/resume/62vp2u3ehe4'><FaFileAlt size='30'/></a>
+        <a className='link' href='https://resume.creddle.io/resume/41cwja67da0'><FaFileAlt size='30'/></a>
       </div>
     </div>
   )
