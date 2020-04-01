@@ -9,7 +9,7 @@ export default [
   {
     name: 'Phonetic Alphabet Generator',
     description: 'Generates a phonetic alphabet based on a given word.',
-    live_link: 'https://crystalneal.com/phonetic-alphabet-generator/',
+    live_link: 'https://chris-neal.rocks//phonetic-alphabet-generator/',
     demo_link: 'https://youtu.be/EG7amDsmo-8',
     github_link: 'https://github.com/DangerN/phonetic-alphabet-generator'
   },
@@ -23,14 +23,14 @@ export default [
   {
     name: 'AR Game',
     description: 'An augmented reality game intended to be played with paper markers and a smart phone. Built with Rails and AR.js',
-    live_link: 'https://crystalneal.com/AR-game/',
+    live_link: 'https://chris-neal.rocks//AR-game/',
     demo_link: 'https://youtu.be/rGR9RfoXKF8',
     github_link: 'https://github.com/DangerN/AR-game'
   },
   {
     name: 'Personal Website',
     description: 'The very site you are looking at! Recently renovated as a React app.',
-    live_link: 'http://crystalneal.com',
+    live_link: 'https://chris-neal.rocks/',
     github_link: 'https://github.com/DangerN/DangerN.github.io'
   },
   {
