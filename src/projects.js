@@ -9,14 +9,14 @@ export default [
   {
     name: 'Phonetic Alphabet Generator',
     description: 'Generates a phonetic alphabet based on a given word.',
-    live_link: 'https://chris-neal.rocks//phonetic-alphabet-generator/',
+    live_link: 'https://chris-neal.rocks/phonetic-alphabet-generator/',
     demo_link: 'https://youtu.be/EG7amDsmo-8',
     github_link: 'https://github.com/DangerN/phonetic-alphabet-generator'
   },
   {
     name: 'Bezier Curver',
     description: 'This app is designed to help visualize different values for the cubic bezier animation timing function as it pertains to CSS styling.',
-    live_link: 'http://crystalneal.com/bezier-curver/',
+    live_link: 'http://chris-neal.rocks/bezier-curver/',
     demo_link: 'https://youtu.be/yEBS2AT4j3Y',
     github_link: 'https://github.com/DangerN/bezier-curver'
   },
